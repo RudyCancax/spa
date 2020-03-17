@@ -12,6 +12,7 @@ import { APP_ROUTING } from './app.routes';
 
 // Servicios
 import { HeroesService } from './servicios/heroes.service';
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HeroesService } from './servicios/heroes.service';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,

@@ -3,13 +3,24 @@
 
 <div class="card-columns">
 
-    <div class="card">
-        <img class="card-img-top" src="../../../assets/img/aquaman.png" alt="Card image cap">
+    <!-- 
+        Usando ngFor recorremos el objeto y para acceder a sus
+        datos, usamos la variable que especificamos (en este caso es 'i'),
+        seguido del atributo que queremos que muestre.name
+
+        [src] y [alt] : Usamos esta sintáxis, encerrar en corchete, el atributo
+        de la etiqueta, para específicar que Angular se encargará de ese atributo.
+    -->
+
+    <div class="card animated fadeIn fast" *ngFor="let i of heroes; let j = index">
+        <img class="card-img-top" [src]="i.img" [alt]="i.nombre">
         <div class="card-body">
-            <h5 class="card-title"> {{ nombre }} </h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <button type="button" class="btn btn-outline-primary btn-block">Ver más ...</button>
+            <h5 class="card-title"> {{ i.nombre }} </h5>
+            <p class="card-text"> {{ i.bio }}</p>
+            <p class="card-text"><small class="text-muted"> {{ i.aparicion }} </small></p>
+
+
+            <a [routerLink]="['/heroe', j]" class="btn btn-outline-primary">Ver más link...</a>
         </div>
     </div>
 
