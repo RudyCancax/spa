@@ -11,5 +11,4 @@ export class HeroeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
 }

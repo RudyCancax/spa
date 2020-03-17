@@ -17,7 +17,7 @@ export class HeroesComponent implements OnInit {
 
 
   // Agregamos en el constructor el servicio importado, y creamos un router
-  constructor( private heroesService: HeroesService, 
+  constructor( private heroesService: HeroesService,
                private router: Router ) {
     console.log('Constructor');
   }
@@ -28,10 +28,10 @@ export class HeroesComponent implements OnInit {
     console.log(this.heroes);  // Imprimimos por consola el objeto
   }
 
-  idHeroe( idx: number ){
+  idHeroe( idx: number ) {
     console.log(idx);
 
     // Mandamos como en [routerLink] un arreglo, con la ruta base, y el index.
-    this.router.navigate( ['/heroe', idx]); 
+    this.router.navigate( ['/heroe', idx]);
   }
 }
