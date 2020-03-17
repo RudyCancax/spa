@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// Importamos el Servicio Creado
+import { HeroesService } from '../../servicios/heroes.service';
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  constructor() { }
+  // Agregamos en el constructor el servicio importado
+  constructor( private heroesService: HeroesService ) {
+
+  }
 
   ngOnInit(): void {
   }
 
+  nombre = "Joel Cancax (Alias: Batman)";
 }
