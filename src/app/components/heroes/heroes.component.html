@@ -19,8 +19,9 @@
             <p class="card-text"> {{ i.bio }}</p>
             <p class="card-text"><small class="text-muted"> {{ i.aparicion }} </small></p>
 
+            <button (click)="idHeroe(j)" type="button" class="btn btn-outline-primary btn-block">Ver más ...</button>
 
-            <a [routerLink]="['/heroe', j]" class="btn btn-outline-primary">Ver más link...</a>
+            <!-- <a [routerLink]="['/heroe', j]" class="btn btn-outline-primary">Ver más link...</a> -->
         </div>
     </div>
 
