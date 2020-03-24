@@ -1,1 +1,23 @@
-<<i class="fas fa-h1    "> HOLA MUNDO </i>>
+<h1> {{ heroe.nombre }} <small> {{ heroe.aparicion }} </small></h1>
+<hr>
+
+<div class="row animated fadeIn medium">
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
+        <br><br>
+        <button (click)="regresaHeroes()" type="button" class="btn btn-outline-danger btn-block">Regresar</button>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ heroe.nombre }}</h3>
+        <hr>
+        <p>
+            {{ heroe.bio }} {{ heroe.casa }}
+        </p>
+
+        <div>
+            <img src="../../../assets/img/marvel.png" *ngIf='heroe.casa=="Marvel"' class="img-logo">
+            <img src="../../../assets/img/dcomics.png" *ngIf='heroe.casa=="DC"' class="img-logo">
+        </div>
+
+    </div>
+</div>

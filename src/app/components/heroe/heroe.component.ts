@@ -1,7 +1,8 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService } from '../../servicios/heroes.service';
-
+// Para las rutas
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroe',
@@ -14,9 +15,9 @@ export class HeroeComponent {
 
   // Importamos el Servicio
   constructor( private activatedRoute: ActivatedRoute,
-               private heroeService:   HeroesService
+               private heroeService: HeroesService,
+               private router: Router
                ) {
-
     this.activatedRoute.params.subscribe( params => {
       console.log(params['id']);
 
@@ -25,7 +26,9 @@ export class HeroeComponent {
     });
   }
 
-  ngOnInit(): void {
+  regresaHeroes() {
+    console.log();
+    // Mandamos como en [routerLink] un arreglo, con la ruta base, y el index.
+    this.router.navigate(['/heroes']);
   }
-
 }
